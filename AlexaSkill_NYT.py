@@ -4,6 +4,7 @@ Created on 06.05.2017
 @author: phil
 '''
 # Hello hola
+# Phil stinkt111!!!
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
