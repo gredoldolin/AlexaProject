@@ -3,12 +3,6 @@ Created on 06.05.2017
 
 @author: phil
 '''
-#Chris stinkt mehr
-#hello
-#Alter ihr habt doch nen Schaden
-#Pranav
-
-#phil
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
@@ -62,9 +56,3 @@ def no_intent():
     
 if __name__ == '__main__':
     app.run(debug=True)
-
-#Prrrrrrrrrrrrrranav
-
-#phil
-
-#chris
