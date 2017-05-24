@@ -4,6 +4,7 @@ Created on 06.05.2017
 @author: phil
 '''
 #Chris stinkt mehr
+#hello
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
