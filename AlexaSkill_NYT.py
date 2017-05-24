@@ -63,10 +63,14 @@ def no_intent():
 if __name__ == '__main__':
     app.run(debug=True)
     
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 #Prrrrrrrrrrrrrranav
 =======
+=======
+#phil
+>>>>>>> origin/master
 
 #chris
 >>>>>>> origin/master
