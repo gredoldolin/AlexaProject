@@ -3,10 +3,7 @@ Created on 06.05.2017
 
 @author: phil
 '''
-# Hello hola
-# Phil stinkt111!!!
-
-
+#Chris stinkt mehr
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
