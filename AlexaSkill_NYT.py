@@ -1,4 +1,4 @@
-'''
+" "'''
 Created on 06.05.2017
 
 @author: phil
@@ -29,6 +29,7 @@ def get_headlinesHome():
     
     for listing in result:
         titles.append( listing['title'] )
+        titles.append( "next" )
     return titles  
 
 
@@ -46,7 +47,8 @@ def get_headlinesSports():
     result = data['results']
     
     for listing in result:
-        titles.append( listing['title'] )
+        titles.append( listing['title'] )     
+        titles.append( "next" )
     return titles  
 
 
@@ -65,6 +67,7 @@ def get_headlinesPolitics():
     
     for listing in result:
         titles.append( listing['title'] )
+        titles.append( "next" )
     return titles  
 
 
@@ -83,6 +86,7 @@ def get_headlinesTechnology():
     
     for listing in result:
         titles.append( listing['title'] )
+        titles.append( "next" )
     return titles  
 
 
@@ -103,7 +107,7 @@ def homepage():
 
 @ask.launch
 def start_skill():
-    welcome_message = 'Welcome sir. You look so beautiful today. Which recent news do you like to hear from the New York Times? We have the following categories available... Top News...Sports...Technology...and Politics'
+    welcome_message = 'Welcome sir. Which recent news do you like to hear from the New York Times? We have the following categories available... Top News...Sports...Technology...and Politics'
     return question(welcome_message)
 
 
@@ -117,21 +121,21 @@ def share_headlines():
 @ask.intent("YesIntentSports")
 def share_headlines():
     headlines = get_headlinesSports()
-    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for sports {}'.format(headlines)
     return statement(headline_msg)
 
 
 @ask.intent("YesIntentPolitics")
 def share_headlines():
     headlines = get_headlinesPolitics()
-    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for politics {}'.format(headlines)
     return statement(headline_msg)
 
 
 @ask.intent("YesIntentTechnology")
 def share_headlines():
     headlines = get_headlinesTechnology()
-    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for technology{}'.format(headlines)
     return statement(headline_msg)
 
 
