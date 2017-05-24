@@ -103,7 +103,7 @@ def homepage():
 
 @ask.launch
 def start_skill():
-    welcome_message = 'Welcome sir. You look so beautiful today. Would you like the recent top news from the New York Times?'
+    welcome_message = 'Welcome sir. You look so beautiful today. Which recent news do you like to hear from the New York Times? We have the following categories available... Top News...Sports...Technology...and Politics'
     return question(welcome_message)
 
 
