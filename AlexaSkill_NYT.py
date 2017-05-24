@@ -10,7 +10,6 @@ Created on 06.05.2017
 
 #phil
 
-
 from flask import Flask
 from flask_ask import Ask, statement, question, session
 import json
