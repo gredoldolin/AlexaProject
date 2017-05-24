@@ -1,7 +1,7 @@
 '''
 Created on 06.05.2017
 
-@author: phil
+@author: phil & pranav & chris
 '''
 
 # open ngrok command line and type
