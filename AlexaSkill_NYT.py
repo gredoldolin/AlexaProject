@@ -5,6 +5,8 @@ Created on 06.05.2017
 '''
 #Chris stinkt mehr
 #hello
+#phil
+
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
