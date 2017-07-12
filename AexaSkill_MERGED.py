@@ -8,10 +8,33 @@ from flask import Flask
 from flask_ask import Ask, statement, question, session
 import json
 import requests
+from afinn import Afinn
 #import unidecode
 
 app = Flask(__name__)
 ask = Ask(app, "/worldnews")
+
+
+# Sentiment Analysis with AFINN
+#afinn = Afinn()
+
+#def get_headlinesSentiment():
+#    sess = requests.Session()
+#    url = "https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=latest&apiKey=3534992ea6b64a28866c01fcc2cfba24"
+#    html = sess.get(url)
+#    data = json.loads(html.content.decode('utf-8'))
+#    titles = []
+#    result = data['articles']
+#    
+#    for listing in result:
+#        titles.append( listing['title'] )
+#        titles = [w.replace(' - Times of India', '') for w in titles]
+#        titles.append( " next headline  ... " )   
+#
+#    a = afinn.score('titles'[:9])
+#    return a
+
+
 
 # NYT functions
 def get_headlinesHome():
@@ -25,7 +48,7 @@ def get_headlinesHome():
     for listing in result:
         titles.append( listing['title'] )
         titles.append( "next headline" )
-    return titles  
+    return titles[:9]
 
 
 def get_headlinesSports():
@@ -39,7 +62,7 @@ def get_headlinesSports():
     for listing in result:
         titles.append( listing['title'] )     
         titles.append( "next headline" )
-    return titles  
+    return titles[:9]
 
 
 def get_headlinesPolitics():
@@ -53,7 +76,7 @@ def get_headlinesPolitics():
     for listing in result:
         titles.append( listing['title'] )
         titles.append( "next headline" )
-    return titles  
+    return titles[:9]
 
 
 def get_headlinesTechnology():
@@ -67,7 +90,7 @@ def get_headlinesTechnology():
     for listing in result:
         titles.append( listing['title'] )
         titles.append( "next headline" )
-    return titles  
+    return titles[:9]
 
 
 # TOI functions
@@ -79,12 +102,12 @@ def get_headlinesTop():
     titles = []
     result = data['articles']
     
+#    for listing in result:
     for listing in result:
         titles.append( listing['title'] )
-        titles = [w.replace('Times of India', '') for w in titles]
-        titles.append( "next headline" )
-        
-    return titles
+        titles = [w.replace(' - Times of India', '') for w in titles]
+        titles.append( "  ... next headline ... " )   
+    return titles[:9]
 
 def get_headlinesLatest():
     sess = requests.Session()
@@ -96,26 +119,34 @@ def get_headlinesLatest():
     
     for listing in result:
         titles.append( listing['title'] )
-        titles = [w.replace('Times of India', '') for w in titles]
-        titles.append( "next headline" )   
-    return titles  
+        titles = [w.replace(' - Times of India', '') for w in titles]
+        titles.append( " next headline  ... " )   
+    #return titles  
+    return titles[:9]  
+
 
 
 ## Print results
+
+# Sentiment Analysis with afinn
+
+
+b = get_headlinesSentiment()
+print(b)
 # TOI
 x = get_headlinesTop()
-print(x)
+#print(x)
 y = get_headlinesLatest()
-print(y)
+#print(y)
     
 # NYT
-#x = get_headlinesHome()
-#print(x)    
-#y = get_headlinesSports()
+x = get_headlinesHome()
+print(x)   
+y = get_headlinesSports()
 #print(y)    
-#z = get_headlinesTechnology()
+z = get_headlinesTechnology()
 #print(z)    
-#aa = get_headlinesPolitics()
+aa = get_headlinesPolitics()
 #print(aa)
 
 ## Welcome message.
@@ -139,7 +170,7 @@ def start_NYT():
 
 @ask.intent("YesIntentTOI")
 def start_TOI():
-    welcome_TOI = "Would you like to hear the latest or the top news?"
+    welcome_TOI = "Would you like to hear the latest or the top news?"    
     return question(welcome_TOI)
 
 

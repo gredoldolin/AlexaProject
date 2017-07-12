@@ -103,6 +103,8 @@ adodbapi.ado_consts|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib
 adodbapi.adodbapi|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\site-packages\adodbapi\adodbapi.py
 adodbapi.is64bit|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\site-packages\adodbapi\is64bit.py
 adodbapi.schema_table|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\site-packages\adodbapi\schema_table.py
+afinn.__init__|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\site-packages\afinn\__init__.py
+afinn.afinn|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\site-packages\afinn\afinn.py
 afxres|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\site-packages\win32\lib\afxres.py
 aifc|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\aifc.py
 aniso8601.__init__|C:\Users\phili\AppData\Local\Programs\Python\Python36-32\lib\site-packages\aniso8601\__init__.py

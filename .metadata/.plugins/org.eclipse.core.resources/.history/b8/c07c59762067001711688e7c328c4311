@@ -1,0 +1,11 @@
+'''
+Created on 12.07.2017
+
+@author: phili
+'''
+from afinn import Afinn
+
+
+# Sentiment Analysis with AFINN
+afinn = Afinn()
+afinn.score('This is utterly excellent!')

@@ -1,0 +1,14 @@
+'''
+Created on 12.07.2017
+
+@author: phili
+'''
+#import afinn
+from afinn import Afinn
+
+
+
+# Sentiment Analysis with AFINN
+afinn = Afinn()
+a = afinn.score('Chris')
+print(a)
