@@ -12,7 +12,7 @@ import requests
 #import unidecode
 
 app = Flask(__name__)
-ask = Ask(app, "/nyt_reader")
+ask = Ask(app, "/world_news_reader")
 
 
 # NYT functions
