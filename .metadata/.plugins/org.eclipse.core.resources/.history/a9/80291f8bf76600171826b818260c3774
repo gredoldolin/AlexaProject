@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;AlexaSkill&apos; to &apos;Eclipse&apos;" description="Rename resource &apos;AlexaSkill&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/AlexaSkill" name="Eclipse" stamp="1495657481379" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Eclipse&apos; to &apos;Eclipse_AlexaSkill&apos;" description="Rename resource &apos;Eclipse&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Eclipse" name="Eclipse_AlexaSkill" stamp="1495657502196" updateReferences="true"/>
+</session>

@@ -1,0 +1,120 @@
+" "'''
+Created on 06.05.2017
+
+@author: chris
+'''
+#testest
+
+from flask import Flask
+from flask_ask import Ask, statement, question, session
+import json
+import requests
+#import unidecode
+
+app = Flask(__name__)
+ask = Ask(app, "/nyt_reader")
+
+
+
+def get_headlinesHome():
+
+    sess = requests.Session()
+
+    url = "https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=top&apiKey=3534992ea6b64a28866c01fcc2cfba24"
+    html = sess.get(url)
+    data = json.loads(html.content.decode('utf-8'))
+    titles = []
+    result = data['articles']
+    
+    for listing in result:
+        titles.append( listing['title'] )
+        titles.append( "next headline" )
+    return titles
+
+def get_headlinesLatest():
+
+    sess = requests.Session()
+
+    url = "https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=latest&apiKey=3534992ea6b64a28866c01fcc2cfba24"
+    html = sess.get(url)
+    data = json.loads(html.content.decode('utf-8'))
+    titles = []
+    result = data['articles']
+    
+    for listing in result:
+        titles.append( listing['title'] )
+        titles.append( "next headline" )
+    return titles  
+
+    
+x = get_headlinesHome()
+print(x)
+y = get_headlinesLatest()
+print(y)
+
+@app.route('/')
+def homepage():
+    return "Welcome Sir!"
+
+@ask.launch
+def start_skill():
+    welcome_message = "Which news source would you like to hear. We've got the New York Times, the Sun or the Indian Times."
+    return question(welcome_message)
+
+@ask.intent("YesIntentNYT")
+def start_NYT():
+    welcome_NYT = "New York, concrete jungle where dreams are made of. Please choose one of the following categories. Top News...Sports...Technology...and Politics."
+    return question(welcome_NYT)
+
+@ask.intent("YesIntentTOI")
+def start_NYT():
+    welcome_NYT = "Would you like to hear the latest or the top news?"
+    return question(welcome_TOI)
+
+@ask.intent("YesIntentHome")
+def share_headlines():
+    headlines = get_headlinesHome()
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
+    return statement(headline_msg)
+
+@ask.intent("YesIntentLatest")
+def share_headlines():
+    headlines = get_headlinesLatest()
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
+    return statement(headline_msg)
+
+@ask.intent("YesIntentHome")
+def share_headlines():
+    headlines = get_headlinesHome()
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
+    return statement(headline_msg)
+
+
+@ask.intent("YesIntentPopular")
+def share_headlines():
+    headlines = get_headlinesPopular()
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for sports {}'.format(headlines)
+    return statement(headline_msg)
+
+
+@ask.intent("YesIntentPolitics")
+def share_headlines():
+    headlines = get_headlinesPolitics()
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for politics {}'.format(headlines)
+    return statement(headline_msg)
+
+
+@ask.intent("YesIntentTechnology")
+def share_headlines():
+    headlines = get_headlinesTechnology()
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for technology{}'.format(headlines)
+    return statement(headline_msg)
+
+
+@ask.intent("NoIntent")
+def no_intent():
+    bye_text = 'Why the hell did you asked me than?'
+    return statement(bye_text)
+    
+if __name__ == '__main__':
+    app.run(debug=True)

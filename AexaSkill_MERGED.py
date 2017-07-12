@@ -3,7 +3,6 @@ Created on 06.05.2017
 
 @author: phil
 '''
-#testest
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
@@ -12,8 +11,7 @@ import requests
 #import unidecode
 
 app = Flask(__name__)
-ask = Ask(app, "/world_news_reader")
-
+ask = Ask(app, "/worldnews")
 
 # NYT functions
 def get_headlinesHome():
@@ -83,7 +81,9 @@ def get_headlinesTop():
     
     for listing in result:
         titles.append( listing['title'] )
+        titles = [w.replace('Times of India', '') for w in titles]
         titles.append( "next headline" )
+        
     return titles
 
 def get_headlinesLatest():
@@ -96,7 +96,8 @@ def get_headlinesLatest():
     
     for listing in result:
         titles.append( listing['title'] )
-        titles.append( "next headline" )
+        titles = [w.replace('Times of India', '') for w in titles]
+        titles.append( "next headline" )   
     return titles  
 
 
@@ -108,14 +109,14 @@ y = get_headlinesLatest()
 print(y)
     
 # NYT
-x = get_headlinesHome()
-print(x)    
-y = get_headlinesSports()
-print(y)    
-z = get_headlinesTechnology()
-print(z)    
-aa = get_headlinesPolitics()
-print(aa)
+#x = get_headlinesHome()
+#print(x)    
+#y = get_headlinesSports()
+#print(y)    
+#z = get_headlinesTechnology()
+#print(z)    
+#aa = get_headlinesPolitics()
+#print(aa)
 
 ## Welcome message.
 @app.route('/')

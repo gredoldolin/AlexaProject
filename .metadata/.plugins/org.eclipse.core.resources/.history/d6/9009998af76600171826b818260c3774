@@ -1,0 +1,28 @@
+0000000000000000000000000000000000000000 f3fae21b0c5fd9b1405e80868cb8ae1276b43f64 PhilippKay <s_krank@stud.hwr-berlin.de> 1495658568 +0200	clone: from https://github.com/PhilippKay/AlexaProject.git
+f3fae21b0c5fd9b1405e80868cb8ae1276b43f64 c5123832e8e2809cc2ea46d63fdbdb86449c8def PhilippKay <s_krank@stud.hwr-berlin.de> 1495658607 +0200	commit: Next Level
+c5123832e8e2809cc2ea46d63fdbdb86449c8def 47d6a98930ae8c423ff7660e2a6eded3bc307ceb PhilippKay <s_krank@stud.hwr-berlin.de> 1495660543 +0200	commit: xx
+47d6a98930ae8c423ff7660e2a6eded3bc307ceb c715a298890e19b023cc62ac0a3a69532f8533c9 PhilippKay <s_krank@stud.hwr-berlin.de> 1495660549 +0200	pull --progress --rebase --prune origin master: checkout c715a298890e19b023cc62ac0a3a69532f8533c9
+c715a298890e19b023cc62ac0a3a69532f8533c9 937529118ef3a7d8739111579139364e9edce64e PhilippKay <s_krank@stud.hwr-berlin.de> 1495660550 +0200	pull --progress --rebase --prune origin master: xx
+937529118ef3a7d8739111579139364e9edce64e 937529118ef3a7d8739111579139364e9edce64e PhilippKay <s_krank@stud.hwr-berlin.de> 1495660550 +0200	rebase finished: returning to refs/heads/master
+937529118ef3a7d8739111579139364e9edce64e 676efff137a2f39a25ce9e693cd1f1ea5027817d PhilippKay <s_krank@stud.hwr-berlin.de> 1495660644 +0200	commit: next level
+676efff137a2f39a25ce9e693cd1f1ea5027817d 1fdd8db3768195d4c34bdd7a021ecdfda2661af6 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661116 +0200	pull --progress --rebase --prune origin master: checkout 1fdd8db3768195d4c34bdd7a021ecdfda2661af6
+1fdd8db3768195d4c34bdd7a021ecdfda2661af6 1fdd8db3768195d4c34bdd7a021ecdfda2661af6 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661117 +0200	rebase finished: returning to refs/heads/master
+1fdd8db3768195d4c34bdd7a021ecdfda2661af6 513519ab293d70d8fd8fc84c02754592558ac628 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661175 +0200	commit: test
+513519ab293d70d8fd8fc84c02754592558ac628 bfbb4f63a1db80f26cdee204605e563405450681 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661717 +0200	pull --progress --rebase --prune origin master: checkout bfbb4f63a1db80f26cdee204605e563405450681
+bfbb4f63a1db80f26cdee204605e563405450681 bfbb4f63a1db80f26cdee204605e563405450681 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661718 +0200	rebase finished: returning to refs/heads/master
+bfbb4f63a1db80f26cdee204605e563405450681 66246eda9df481054010a098c504ff6f15c552c1 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661851 +0200	pull --progress --rebase --prune origin master: checkout 66246eda9df481054010a098c504ff6f15c552c1
+66246eda9df481054010a098c504ff6f15c552c1 66246eda9df481054010a098c504ff6f15c552c1 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661852 +0200	rebase finished: returning to refs/heads/master
+66246eda9df481054010a098c504ff6f15c552c1 df1870251aa3a6a9a70d682ff4e0b0568ba0c053 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661936 +0200	commit: x
+df1870251aa3a6a9a70d682ff4e0b0568ba0c053 9289771146d94fce6f61a01f3e406b5766d31ec0 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661989 +0200	pull --progress --rebase --prune origin master: checkout 9289771146d94fce6f61a01f3e406b5766d31ec0
+9289771146d94fce6f61a01f3e406b5766d31ec0 9dfddcff89aa54e31ceae3c27c7e6af35bd6dfa5 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661990 +0200	pull --progress --rebase --prune origin master: x
+9dfddcff89aa54e31ceae3c27c7e6af35bd6dfa5 9dfddcff89aa54e31ceae3c27c7e6af35bd6dfa5 PhilippKay <s_krank@stud.hwr-berlin.de> 1495661990 +0200	rebase finished: returning to refs/heads/master
+9dfddcff89aa54e31ceae3c27c7e6af35bd6dfa5 5046d80b046da17c4cd548840c8620a653dd05f0 PhilippKay <s_krank@stud.hwr-berlin.de> 1495662125 +0200	pull --progress --rebase --prune origin master: checkout 5046d80b046da17c4cd548840c8620a653dd05f0
+5046d80b046da17c4cd548840c8620a653dd05f0 5046d80b046da17c4cd548840c8620a653dd05f0 PhilippKay <s_krank@stud.hwr-berlin.de> 1495662126 +0200	rebase finished: returning to refs/heads/master
+5046d80b046da17c4cd548840c8620a653dd05f0 dc55febf4b7fffdcf3c1b9c3c79fc3b677e075af PhilippKay <s_krank@stud.hwr-berlin.de> 1495662174 +0200	commit: x
+dc55febf4b7fffdcf3c1b9c3c79fc3b677e075af 37a8165910d9499b1339ab6963e819706af918a7 PhilippKay <s_krank@stud.hwr-berlin.de> 1495662326 +0200	pull --progress --rebase --prune origin master: checkout 37a8165910d9499b1339ab6963e819706af918a7
+37a8165910d9499b1339ab6963e819706af918a7 37a8165910d9499b1339ab6963e819706af918a7 PhilippKay <s_krank@stud.hwr-berlin.de> 1495662326 +0200	rebase finished: returning to refs/heads/master
+37a8165910d9499b1339ab6963e819706af918a7 d391cff5f7d8485cdebfb2e37cf24ba9c7b2b25f PhilippKay <s_krank@stud.hwr-berlin.de> 1495662899 +0200	commit: Next Level of Evolution
+d391cff5f7d8485cdebfb2e37cf24ba9c7b2b25f 165c5fc7cf0f1cc27491f3f7b38c050862adde2e PhilippKay <s_krank@stud.hwr-berlin.de> 1495663176 +0200	commit: x
+165c5fc7cf0f1cc27491f3f7b38c050862adde2e 390e8e91ba46c54562eb287feb8ef844adb4272c PhilippKay <s_krank@stud.hwr-berlin.de> 1495664403 +0200	commit: xx
+390e8e91ba46c54562eb287feb8ef844adb4272c b81c480a0ea76fbe24653a61cd57cc5c71629ed4 PhilippKay <s_krank@stud.hwr-berlin.de> 1495724870 +0200	commit: test
+b81c480a0ea76fbe24653a61cd57cc5c71629ed4 fcba661f07be4485657752a50d40d3703e2e5b47 PhilippKay <s_krank@stud.hwr-berlin.de> 1499859456 +0200	pull --progress --prune origin master: Fast-forward

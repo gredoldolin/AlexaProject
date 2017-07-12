@@ -3,7 +3,7 @@ Created on 06.05.2017
 
 @author: chris
 '''
-#testest
+#testphil
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
@@ -67,7 +67,7 @@ def start_NYT():
     return question(welcome_NYT)
 
 @ask.intent("YesIntentTOI")
-def start_NYT():
+def start_TOI():
     welcome_NYT = "Would you like to hear the latest or the top news?"
     return question(welcome_TOI)
 

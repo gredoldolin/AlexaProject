@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;AlexaSkill/AlexaSkill_NYT.py&apos;" deleteContents="false" description="Delete resource &apos;AlexaSkill/AlexaSkill_NYT.py&apos;" element1="/AlexaSkill/AlexaSkill_NYT.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1499860188294"/>&#x0A;<refactoring comment="Delete resource &apos;AlexaSkill/AlexaSkill_TOI.py&apos;" deleteContents="false" description="Delete resource &apos;AlexaSkill/AlexaSkill_TOI.py&apos;" element1="/AlexaSkill/AlexaSkill_TOI.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1499860190568"/>
+</session>
