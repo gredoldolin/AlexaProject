@@ -18,6 +18,7 @@ ask = Ask(app, "/worldnews")
 # Sentiment Analysis with AFINN
 afinn = Afinn()
 
+
 # NYT functions
 def get_headlinesHome():
     sess = requests.Session()
@@ -27,10 +28,26 @@ def get_headlinesHome():
     titles = []
     result = data['results']
     
+    # announce new headline (e.g. "second headline:")
+    counter = 2
     for listing in result:
         titles.append( listing['title'] )
-        titles.append( "next headline" )  
-    return titles[:9]
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        elif counter == 4:
+            counter2 = "fourth"
+        elif counter == 5:
+            counter2 = "fifth"
+        else:
+            counter2 = ""
+                    
+        titles.append( str(counter2) + " headline ..." ) 
+        counter = counter + 1 
+        
+    output = str(titles[:9]) + "... That's all for today. I hope you are now well informed. Have a great day ... Goodbye."
+    return output
 
 
 def get_headlinesSports():
@@ -41,10 +58,25 @@ def get_headlinesSports():
     titles = []
     result = data['results']
     
+    # announce new headline (e.g. "second headline:")
+    counter = 2
     for listing in result:
-        titles.append( listing['title'] )     
-        titles.append( "next headline" )
-    return titles[:9]
+        titles.append( listing['title'] )
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        elif counter == 4:
+            counter2 = "fourth"
+        elif counter == 5:
+            counter2 = "fifth"
+        else:
+            counter2 = ""
+                    
+        titles.append( str(counter2) + " headline ..." ) 
+        counter = counter + 1 
+    output = str(titles[:9]) + "... That's all for today. I hope you are now well informed. Have a great day ... Goodbye."
+    return output
 
 
 def get_headlinesPolitics():
@@ -55,10 +87,25 @@ def get_headlinesPolitics():
     titles = []
     result = data['results']
     
+    # announce new headline (e.g. "second headline:")
+    counter = 2
     for listing in result:
         titles.append( listing['title'] )
-        titles.append( "next headline" )
-    return titles[:9]
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        elif counter == 4:
+            counter2 = "fourth"
+        elif counter == 5:
+            counter2 = "fifth"
+        else:
+            counter2 = ""
+                    
+        titles.append( str(counter2) + " headline ..." ) 
+        counter = counter + 1 
+    output = str(titles[:9]) + "... That's all for today. I hope you are now well informed. Have a great day ... Goodbye."
+    return output
 
 
 def get_headlinesTechnology():
@@ -69,10 +116,25 @@ def get_headlinesTechnology():
     titles = []
     result = data['results']
     
+    # announce new headline (e.g. "second headline:")
+    counter = 2
     for listing in result:
         titles.append( listing['title'] )
-        titles.append( "next headline" )
-    return titles[:9]
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        elif counter == 4:
+            counter2 = "fourth"
+        elif counter == 5:
+            counter2 = "fifth"
+        else:
+            counter2 = ""
+                    
+        titles.append( str(counter2) + " headline ..." ) 
+        counter = counter + 1 
+    output = str(titles[:9]) + "... That's all for today. I hope you are now well informed. Have a great day ... Goodbye."
+    return output
 
 
 # TOI functions
@@ -84,12 +146,25 @@ def get_headlinesTop():
     titles = []
     result = data['articles']
     
-#    for listing in result:
+    # announce new headline (e.g. "second headline:")
+    counter = 2
     for listing in result:
         titles.append( listing['title'] )
-        titles = [w.replace(' - Times of India', '') for w in titles]
-        titles.append( "  ... next headline ... " )   
-    return titles[:9]
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        elif counter == 4:
+            counter2 = "fourth"
+        elif counter == 5:
+            counter2 = "fifth"
+        else:
+            counter2 = ""
+                    
+        titles.append( str(counter2) + " headline ..." ) 
+        counter = counter + 1 
+    output = str(titles[:9]) + "... That's all for today. I hope you are now well informed. Have a great day ... Goodbye."
+    return output
 
 def get_headlinesLatest():
     sess = requests.Session()
@@ -99,11 +174,25 @@ def get_headlinesLatest():
     titles = []
     result = data['articles']
     
+    # announce new headline (e.g. "second headline:")
+    counter = 2
     for listing in result:
         titles.append( listing['title'] )
-        titles = [w.replace(' - Times of India', '') for w in titles]
-        titles.append( " next headline  ... " )    
-    return titles[:9]  
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        elif counter == 4:
+            counter2 = "fourth"
+        elif counter == 5:
+            counter2 = "fifth"
+        else:
+            counter2 = ""
+                    
+        titles.append( str(counter2) + " headline ..." ) 
+        counter = counter + 1    
+    output = str(titles[:9]) + "... That's all for today. I hope you are now well informed. Have a great day ... Goodbye."
+    return output
 
 
 # Sentiment NYT
@@ -125,10 +214,29 @@ def get_negativeSentimentNYT():
     
     # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
-    
+ 
+     # announce new headline (e.g. "second headline:")
+    counter = 2
+       
     for k, v in sorted_x.items():
         ergebnis.append(k)
-    return ergebnis[:3]
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        #elif counter == 4:
+        #    counter2 = "fourth"
+        #elif counter == 5:
+        #    counter2 = "fifth"
+        else:
+            counter2 = ""
+                     
+        ergebnis.append( str(counter2) + " most awful headline ..." ) 
+        counter = counter + 1        
+    
+    output = str(ergebnis[:5]) + "... That's all for today. What a sick world we are living in ... Anyway ... I wish you a great day. Goodbye."
+    return output
+
 
 
 def get_positiveSentimentNYT():
@@ -150,9 +258,28 @@ def get_positiveSentimentNYT():
     # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
     
+     # announce new headline (e.g. "second headline:")
+    counter = 2
+       
     for k, v in sorted_x.items():
         ergebnis.append(k)
-    return ergebnis[:3]
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        #elif counter == 4:
+        #    counter2 = "fourth"
+        #elif counter == 5:
+        #    counter2 = "fifth"
+        else:
+            counter2 = ""
+                     
+        ergebnis.append( str(counter2) + " happiest headline ..." ) 
+        counter = counter + 1        
+        
+    output = str(ergebnis[:5]) + "... That's all for today. Yippie Yippie Yeah ... happy news everywhere. I wish you a great day. Goodbye."
+    return output
+
 
 # Sentiment TOI
 def get_negativeSentimentTOI():
@@ -174,10 +301,28 @@ def get_negativeSentimentTOI():
     
     # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
-    
+     # announce new headline (e.g. "second headline:")
+    counter = 2
+       
     for k, v in sorted_x.items():
-        ergebnis.append(k)  
-    return ergebnis[:3]
+        ergebnis.append(k)
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        #elif counter == 4:
+        #    counter2 = "fourth"
+        #elif counter == 5:
+        #    counter2 = "fifth"
+        else:
+            counter2 = ""
+                     
+        ergebnis.append( str(counter2) + " most horrible headline ..." ) 
+        counter = counter + 1        
+        
+    output = str(ergebnis[:5]) + "... That's all for today. What a sick world we are living in ... Anyway ... I wish you a great day. Goodbye."
+    return output   
+
 
 def get_positiveSentimentTOI():
     sess = requests.Session()
@@ -198,10 +343,28 @@ def get_positiveSentimentTOI():
 
     # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
-    
+     # announce new headline (e.g. "second headline:")
+    counter = 2
+       
     for k, v in sorted_x.items():
         ergebnis.append(k)
-    return ergebnis[:3]
+        if counter == 2:
+            counter2 = "second"
+        elif counter == 3:
+            counter2 = "third"
+        #elif counter == 4:
+        #    counter2 = "fourth"
+        #elif counter == 5:
+        #    counter2 = "fifth"
+        else:
+            counter2 = ""
+                     
+        ergebnis.append( str(counter2) + " most joyful headline ..." ) 
+        counter = counter + 1        
+        
+    output = str(ergebnis[:5]) + "... That's all for today. Yippie Yippie Yeah ... joyful news everywhere. I wish you a great day. Goodbye."
+    return output
+
 
 
 ## Welcome message.
@@ -213,19 +376,19 @@ def homepage():
 ## Launch the skill in Alexa.
 @ask.launch
 def start_skill():
-    welcome_message = "Which news source would you like to hear? We've got the New York Times or the Times of India?"
+    welcome_message = "Welcome Professor Mueller ... you smart Business Intelligence students ... and our extremely good looking guests ... Which news source would you like to hear? We've got the New York Times or the Times of India exclusively for you."
     return question(welcome_message)
 
 
 ## Initiate source.
 @ask.intent("YesIntentNYT")
 def start_NYT():
-    welcome_NYT = "New York ... concrete jungle where dreams are made of. Would you like to hear the happiest articles... the most awful ones... or news from the following categories... Top News...Sports...Technology...and Politics."
+    welcome_NYT = "New York ... concrete jungle where dreams are made of. Would you like to hear the happiest articles ... or the most awful ones. You can also choose news from your favorite category ... Most popular News...Sports...Technology...or Politics."
     return question(welcome_NYT)
 
 @ask.intent("YesIntentTOI")
 def start_TOI():
-    welcome_TOI = "India ... homeland of gracious Pranav. Would you like to hear the happiest articles... the most awful ones... or news from the following categories... Top News...Latest News?"    
+    welcome_TOI = "India ... homeland of gorgeous Pranaph. Would you like to hear the most joyful articles ... or the most horrible ones. You can also choose between the top news ... and the latest news."    
     return question(welcome_TOI)
 
 
@@ -233,7 +396,7 @@ def start_TOI():
 @ask.intent("YesIntentHome")
 def share_headlines():
     headlines = get_headlinesHome()
-    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following most popular headlines {}'.format(headlines)
     return statement(headline_msg)
 
 @ask.intent("YesIntentSports")
@@ -272,7 +435,7 @@ def share_headlines():
 @ask.intent("YesIntentNYTSentimentPositive")
 def share_headlines():
         headlines = get_positiveSentimentNYT()
-        headline_msg = 'Alright Sir, I am so glad to announce you the following top three happiest articles {}'.format(headlines)
+        headline_msg = 'Alright Sir, I am so glad to announce you the following three happiest headlines {}'.format(headlines)
         return statement(headline_msg)
 
 @ask.intent("YesIntentNYTSentimentNegative")
@@ -286,13 +449,13 @@ def share_headlines():
 @ask.intent("YesIntentTOISentimentPositive")
 def share_headlines():
         headlines = get_positiveSentimentTOI()
-        headline_msg = 'Alright Sir, I am so glad to announce you the following top three happiest articles {}'.format(headlines)
+        headline_msg = 'Alright Sir, I am so glad to announce you the following three most joyful headlines {}'.format(headlines)
         return statement(headline_msg)
 
 @ask.intent("YesIntentTOISentimentNegative")
 def share_headlines():
         headlines = get_negativeSentimentTOI()
-        headline_msg = 'Alright Sir, I am so sad to announce you the following top three most awful articles {}'.format(headlines)
+        headline_msg = 'Alright Sir, I am so sad to announce you the following top three most horrible articles {}'.format(headlines)
         return statement(headline_msg)
 
 ## No intent

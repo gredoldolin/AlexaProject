@@ -1,0 +1,34 @@
+'''
+Created on 12.07.2017
+
+@author: phili
+'''
+#import afinn
+from afinn import Afinn
+
+#myList = []
+#myList = ['Rancor at White House as Russia Story Refuses to Let the Page Turn', 'next headline', 'Russian Dirt on Clinton? ‘I Love It,’ Donald Trump Jr. Said', 'next headline', 'Campaign Opposition Research Is Standard. But Not ‘Oppo’ From Hostile Nations.', 'next headline', 'Natalia Veselnitskaya, Lawyer Who Met Trump Jr., Seen as Fearsome Moscow Insider', 'next headline', 'Rob Goldstone, Trump Intermediary, Likes Silly Hats and Facebook']
+
+
+# Sentiment Analysis with AFINN
+#afinn = Afinn()
+#a = afinn.score( str(myList) )
+#print(a)
+
+def get_headlinesSentiment(titles):
+
+    df = titles
+    
+    # Sentiment analysis with AFINN
+    afinn = Afinn()
+    afinn_scores = [afinn.score(text) for text in df.text]
+    df['afinn'] = afinn_scores
+    df[['sentiment', 'afinn', 'text']].head(10)
+    
+    
+titles = ['Rancor at White House as Russia Story Refuses to Let the Page Turn', 'next headline', 'Russian Dirt on Clinton? I Love It, Donald Trump Jr. Said', 'next headline', 'Campaign Opposition Research Is Standard. But Not ‘Oppo’ From Hostile Nations.', 'next headline', 'Natalia Veselnitskaya, Lawyer Who Met Trump Jr., Seen as Fearsome Moscow Insider', 'next headline', 'Rob Goldstone, Trump Intermediary, Likes Silly Hats and Facebook']
+
+print( type(titles))
+
+
+#get_headlinesSentiment()

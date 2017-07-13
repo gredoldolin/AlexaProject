@@ -1,4 +1,0 @@
-
-# open ngrok command line and type
-# C:\Users\phili\eclipse\workspace\BigData_Project\Alexa>ngrok http 5000
-# copy https part and add "/nyt_reader" to it in https://developer.amazon.com/edw/home.html#/skill/amzn1.ask.skill.a58fe0ab-0270-46b2-ae34-b5fcf1b55205/en_US/configuration

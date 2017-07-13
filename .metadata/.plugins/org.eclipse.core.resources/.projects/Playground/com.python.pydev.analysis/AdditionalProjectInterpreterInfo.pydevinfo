@@ -1,14 +1,15 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\phili\Documents\GitHub\AlexaProject\.metadata\.plugins\org.eclipse.core.resources\.projects\Playground\com.python.pydev.analysis\v2_indexcache
+Sentiment_Analysis|1499936145486646000|C:\Users\phili\Documents\GitHub\AlexaProject\Playground\Sentiment_Analysis.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+1
+1=Sentiment_Analysis
 -- END DICTIONARY
 -- START TREE 1
-2
-a|0|
-afi|0|
+1
+get|1|get_headlinesSentiment!10@
 -- END TREE
 -- START TREE 2
 0

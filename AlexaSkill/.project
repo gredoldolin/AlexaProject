@@ -16,19 +16,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>AlexaSkill/AexaSkill_MERGED.py</name>
+			<name>AlexaSkill/AlexaSkill_MERGED.py</name>
 			<type>1</type>
-			<location>C:/Users/phili/Documents/GitHub/AlexaProject/AexaSkill_MERGED.py</location>
-		</link>
-		<link>
-			<name>AlexaSkill/AlexaSkill_NYT.py</name>
-			<type>1</type>
-			<location>C:/Users/phili/Documents/GitHub/AlexaProject/AlexaSkill_NYT.py</location>
-		</link>
-		<link>
-			<name>AlexaSkill/AlexaSkill_TOI.py</name>
-			<type>1</type>
-			<location>C:/Users/phili/Documents/GitHub/AlexaProject/AlexaSkill_TOI.py</location>
+			<location>C:/Users/phili/Documents/GitHub/AlexaProject/AlexaSkill_MERGED.py</location>
 		</link>
 	</linkedResources>
 </projectDescription>
