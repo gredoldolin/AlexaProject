@@ -122,9 +122,15 @@ def get_negativeSentimentNYT():
     
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
-    sorted_x = sorted(headline_sentiment.items(), key=operator.itemgetter(1))
+    sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1)))
+    
+    ergebnis = []
+    
+    for k, v in sorted_x.items():
+        ergebnis.append(k)
+        
+    return ergebnis[:3]
 
-    return sorted_x[:3]
 
 def get_positiveSentimentNYT():
     sess = requests.Session()
@@ -139,9 +145,14 @@ def get_positiveSentimentNYT():
     
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
-    sorted_x = sorted(headline_sentiment.items(), key=operator.itemgetter(1), reverse=True)
+    sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1), reverse=True))
 
-    return sorted_x[:3]
+    ergebnis = []
+    
+    for k, v in sorted_x.items():
+        ergebnis.append(k)
+        
+    return ergebnis[:3]
 
 # Sentiment TOI
 def get_negativeSentimentTOI():
@@ -158,9 +169,14 @@ def get_negativeSentimentTOI():
     
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
-    sorted_x = sorted(headline_sentiment.items(), key=operator.itemgetter(1))
-
-    return sorted_x[:3]
+    sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1)))
+    
+    ergebnis = []
+    
+    for k, v in sorted_x.items():
+        ergebnis.append(k)
+        
+    return ergebnis[:3]
 
 def get_positiveSentimentTOI():
     sess = requests.Session()
@@ -176,9 +192,14 @@ def get_positiveSentimentTOI():
     
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
-    sorted_x = sorted(headline_sentiment.items(), key=operator.itemgetter(1), reverse=True)
+    sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1), reverse=True))
 
-    return sorted_x[:3]
+    ergebnis = []
+    
+    for k, v in sorted_x.items():
+        ergebnis.append(k)
+        
+    return ergebnis[:3]
 
 
 ## Welcome message.
@@ -280,25 +301,34 @@ def no_intent():
 
 ## Print results
 
-b = get_negativeSentimentTOI()
+b = get_negativeSentimentNYT()
 print(b)
+
+bb = get_positiveSentimentNYT()
+print(bb)
+
+bbb = get_negativeSentimentTOI()
+print(bbb)
+
+bbbb = get_positiveSentimentTOI()
+print(bbbb)
 
 
 # TOI
-x = get_headlinesTop()
-print(x)
-y = get_headlinesLatest()
-print(y)
+#x = get_headlinesTop()
+#print(x)
+#y = get_headlinesLatest()
+#print(y)
     
 # NYT
-x = get_headlinesHome()
-print(x)   
-y = get_headlinesSports()
-print(y)    
-z = get_headlinesTechnology()
-print(z)    
-aa = get_headlinesPolitics()
-print(aa)
+#x = get_headlinesHome()
+#print(x)   
+#y = get_headlinesSports()
+#print(y)    
+#z = get_headlinesTechnology()
+#print(z)    
+#aa = get_headlinesPolitics()
+#print(aa)
     
 if __name__ == '__main__':
     app.run(debug=True)
