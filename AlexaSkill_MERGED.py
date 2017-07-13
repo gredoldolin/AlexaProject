@@ -6,10 +6,10 @@ Created on 06.05.2017
 
 from flask import Flask
 from flask_ask import Ask, statement, question, session
+from afinn import Afinn
 import json
 import requests
 import operator
-from afinn import Afinn
 #import unidecode
 
 app = Flask(__name__)
@@ -29,8 +29,7 @@ def get_headlinesHome():
     
     for listing in result:
         titles.append( listing['title'] )
-        titles.append( "next headline" )
-        
+        titles.append( "next headline" )  
     return titles[:9]
 
 
@@ -103,8 +102,7 @@ def get_headlinesLatest():
     for listing in result:
         titles.append( listing['title'] )
         titles = [w.replace(' - Times of India', '') for w in titles]
-        titles.append( " next headline  ... " )   
-    #return titles  
+        titles.append( " next headline  ... " )    
     return titles[:9]  
 
 
@@ -120,15 +118,16 @@ def get_negativeSentimentNYT():
     for listing in result:
         titles.append( listing['title'] )
     
+    # Sentiment score for each headline.
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
     sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1)))
     
+    # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
     
     for k, v in sorted_x.items():
         ergebnis.append(k)
-        
     return ergebnis[:3]
 
 
@@ -143,15 +142,16 @@ def get_positiveSentimentNYT():
     for listing in result:
         titles.append( listing['title'] )
     
+    # Sentiment score for each headline.
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
     sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1), reverse=True))
 
+    # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
     
     for k, v in sorted_x.items():
         ergebnis.append(k)
-        
     return ergebnis[:3]
 
 # Sentiment TOI
@@ -166,16 +166,17 @@ def get_negativeSentimentTOI():
     for listing in result:
         titles.append( listing['title'] )
         titles = [w.replace(' - Times of India', '') for w in titles]
-    
+
+    # Sentiment score for each headline.    
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
     sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1)))
     
+    # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
     
     for k, v in sorted_x.items():
-        ergebnis.append(k)
-        
+        ergebnis.append(k)  
     return ergebnis[:3]
 
 def get_positiveSentimentTOI():
@@ -190,15 +191,16 @@ def get_positiveSentimentTOI():
         titles.append( listing['title'] )
         titles = [w.replace(' - Times of India', '') for w in titles]
     
+    # Sentiment score for each headline.
     afinn_scores = [afinn.score(text) for text in titles]
     headline_sentiment = dict(zip(titles, afinn_scores))
     sorted_x = dict(sorted(headline_sentiment.items(), key=operator.itemgetter(1), reverse=True))
 
+    # Get rid of the score values, so that Alexa doesn't read it out.
     ergebnis = []
     
     for k, v in sorted_x.items():
         ergebnis.append(k)
-        
     return ergebnis[:3]
 
 
