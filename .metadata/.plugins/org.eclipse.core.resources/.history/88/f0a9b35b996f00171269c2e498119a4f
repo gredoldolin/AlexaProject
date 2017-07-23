@@ -370,7 +370,7 @@ def get_positiveSentimentTOI():
 ## Welcome message.
 @app.route('/')
 def homepage():
-    return "Welcome!"
+    return "Welcome Sir!"
 
 
 ## Launch the skill in Alexa.
@@ -396,25 +396,25 @@ def start_TOI():
 @ask.intent("YesIntentHome")
 def share_headlines():
     headlines = get_headlinesHome()
-    headline_msg = 'Alright, I am so glad to announce you the following most popular headlines {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following most popular headlines {}'.format(headlines)
     return statement(headline_msg)
 
 @ask.intent("YesIntentSports")
 def share_headlines():
     headlines = get_headlinesSports()
-    headline_msg = 'Alright, I am so glad to announce you the following top headlines for sports {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for sports {}'.format(headlines)
     return statement(headline_msg)
 
 @ask.intent("YesIntentPolitics")
 def share_headlines():
     headlines = get_headlinesPolitics()
-    headline_msg = 'Alright, I am so glad to announce you the following top headlines for politics {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for politics {}'.format(headlines)
     return statement(headline_msg)
 
 @ask.intent("YesIntentTechnology")
 def share_headlines():
     headlines = get_headlinesTechnology()
-    headline_msg = 'Alright, I am so glad to announce you the following top headlines for technology{}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines for technology{}'.format(headlines)
     return statement(headline_msg)
 
 
@@ -422,26 +422,26 @@ def share_headlines():
 @ask.intent("YesIntentTop")
 def share_headlines():
     headlines = get_headlinesTop()
-    headline_msg = 'Alright, I am so glad to announce you the following top headlines {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following top headlines {}'.format(headlines)
     return statement(headline_msg)
 
 @ask.intent("YesIntentLatest")
 def share_headlines():
     headlines = get_headlinesLatest()
-    headline_msg = 'Alright, I am so glad to announce you the following latest headlines {}'.format(headlines)
+    headline_msg = 'Alright Sir, I am so glad to announce you the following latest headlines {}'.format(headlines)
     return statement(headline_msg)
 
 ## NYT sentiment
 @ask.intent("YesIntentNYTSentimentPositive")
 def share_headlines():
         headlines = get_positiveSentimentNYT()
-        headline_msg = 'Alright, I am so glad to announce you the following three happiest headlines {}'.format(headlines)
+        headline_msg = 'Alright Sir, I am so glad to announce you the following three happiest headlines {}'.format(headlines)
         return statement(headline_msg)
 
 @ask.intent("YesIntentNYTSentimentNegative")
 def share_headlines():
         headlines = get_negativeSentimentNYT()
-        headline_msg = 'Alright, I am so sad to announce you the following top three most awful articles {}'.format(headlines)
+        headline_msg = 'Alright Sir, I am so sad to announce you the following top three most awful articles {}'.format(headlines)
         return statement(headline_msg)
 
 
@@ -449,13 +449,13 @@ def share_headlines():
 @ask.intent("YesIntentTOISentimentPositive")
 def share_headlines():
         headlines = get_positiveSentimentTOI()
-        headline_msg = 'Alright, I am so glad to announce you the following three most joyful headlines {}'.format(headlines)
+        headline_msg = 'Alright Sir, I am so glad to announce you the following three most joyful headlines {}'.format(headlines)
         return statement(headline_msg)
 
 @ask.intent("YesIntentTOISentimentNegative")
 def share_headlines():
         headlines = get_negativeSentimentTOI()
-        headline_msg = 'Alright, I am so sad to announce you the following top three most horrible articles {}'.format(headlines)
+        headline_msg = 'Alright Sir, I am so sad to announce you the following top three most horrible articles {}'.format(headlines)
         return statement(headline_msg)
 
 ## No intent

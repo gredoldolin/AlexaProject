@@ -1,32 +1,12 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\phili\Documents\GitHub\AlexaProject\.metadata\.plugins\org.eclipse.core.resources\.projects\AlexaSkill\com.python.pydev.analysis\v2_indexcache
-_MERGED|1499959822899253000|C:\Users\phili\Documents\GitHub\AlexaProject\AlexaSkill_MERGED.py
 -- END DISKCACHE
 -- START DICTIONARY
-1
-1=_MERGED
+0
 -- END DICTIONARY
 -- START TREE 1
-18
-aa|0|
-afi|1|afinn!11@
-app|1|app!11@
-ask|1|ask!11@
-b|1|b!11@
-b2|0|
-b3|0|
-b4|0|
-bb|1|bb!11@
-bbb|2|bbbb!11@bbb!11@
-get|10|get_positiveSentimentNYT!10@get_negativeSentimentTOI!10@get_headlinesHome!10@get_positiveSentimentTOI!10@get_headlinesPolitics!10@get_headlinesTop!10@get_headlinesLatest!10@get_headlinesSports!10@get_headlinesTechnology!10@get_negativeSentimentNYT!10@
-hom|1|homepage!10@
-no_|1|no_intent!10@
-sha|1|share_headlines!10@
-sta|3|start_TOI!10@start_NYT!10@start_skill!10@
-x|0|
-y|0|
-z|0|
+0
 -- END TREE
 -- START TREE 2
 0
