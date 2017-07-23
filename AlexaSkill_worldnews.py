@@ -150,6 +150,7 @@ def get_headlinesTop():
     counter = 2
     for listing in result:
         titles.append( listing['title'] )
+        titles = [w.replace(' - Times of India', '') for w in titles]
         if counter == 2:
             counter2 = "second"
         elif counter == 3:
@@ -178,6 +179,7 @@ def get_headlinesLatest():
     counter = 2
     for listing in result:
         titles.append( listing['title'] )
+        titles = [w.replace(' - Times of India', '') for w in titles]
         if counter == 2:
             counter2 = "second"
         elif counter == 3:
@@ -480,10 +482,10 @@ print(bbbb)
 
 
 # TOI
-#x = get_headlinesTop()
-#print(x)
-#y = get_headlinesLatest()
-#print(y)
+x = get_headlinesTop()
+print(x)
+y = get_headlinesLatest()
+print(y)
     
 # NYT
 #x = get_headlinesHome()
