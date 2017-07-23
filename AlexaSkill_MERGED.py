@@ -1,7 +1,7 @@
 " "'''
-Created on 06.05.2017
+Created between 06.05.2017 and 16.07.2017
 
-@author: phil
+@authors: phil, ck12, Delta4s2Cyclone
 '''
 
 from flask import Flask
