@@ -5,7 +5,7 @@ Christian Kregelin | Philipp Krank | Pranav Pandya
 
 ## Introduction
 
-This is a project for our course "Enterprise Architecture for Big Data". Alexa is the cloud-based “intelligent personal assistant” which processes your requests and supplies answers back through Echo. Alexa is fairly recent in German market (launched in Sept '16) and has great potential for developers to come up with use cases. Our mission is to make use of natural language processing in order to build custom Alexa skill. 
+This is a project for our course "Enterprise Architecture for Big Data". Alexa is a Amazon's cloud-based “intelligent personal assistant” bz Amazon which processes your requests and supplies answers back through Echo. Alexa is fairly recent in German market (launched in Sept '16) and has great potential for developers to come up with use cases. Our mission is to make use of natural language processing in order to build custom Alexa skill. 
 
 ## Project objectives:
 * Build an Alexa Skill that extracts news from a newspaper according to the user’s interest 
