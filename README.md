@@ -1,5 +1,4 @@
-#### Project team members:
-
+#### Team members:
 Christian Kregelin | Philipp Krank | Pranav Pandya
 --- | --- | --- | 
 
@@ -18,5 +17,23 @@ This includes:
   * according to news source, category, mood (sentiment analysis)
 
 ## Technologies used:
+  * Alexa device
+  * AWS Cloud
+  * Python
+  * Eclipse(IDE)
+  * Web API
+  * Github
+  * Flask
+  * ngrok
 
-![alt text](https://github.com/pranavpandya84/AlexaProject/blob/master/uploads/04%20techs%20used.PNG)
+
+![alt text](https://github.com/pranavpandya84/AlexaProject/blob/master/uploads/01%20how%20echo%20works.PNG)
+* The natural language understanding part starts with voice command sent from the user to Amazon echo. Under the hood, voice/ speech is converted to text and this is where natural language processing part starts. The output is TTS (Text to Speech) based on logic defined in interaction model. 
+
+![alt text](https://github.com/pranavpandya84/AlexaProject/blob/master/uploads/02%20architecture.PNG)
+Note: Audio responses are rendered on device
+
+* For testing our script on our own Amazon Echo device, we used "ngrok", which securely tunnels to our localhost (= our computer or rather the virtual IP-address of the currently running server on our computer).
+
+
+![alt text](https://github.com/pranavpandya84/AlexaProject/blob/master/uploads/03%20interaction%20model.PNG)
